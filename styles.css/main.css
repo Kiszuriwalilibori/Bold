@@ -377,11 +377,23 @@ option {
 
 .menu__item {
   font-weight: bold;
+  display: inline-block;
   font-size: 14px;
   line-height: 17px;
   font-weight: bold;
   text-transform: uppercase;
   margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+}
+
+.menu__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .hamburger-menu {

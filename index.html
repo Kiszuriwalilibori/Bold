@@ -12,6 +12,8 @@
     <meta property="og:title" content="Bold recruitment task by Piotr Maksymiuk" />
     <meta property="og:type" content="Web Application" />
     <meta property="og:url" content="http://kiszuriwalilibori.github.io/bold" />
+    <meta name="version" content="1.0.1">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 </head>
 
 <body>
@@ -19,18 +21,18 @@
     <header>
         <section class='overview'>
             <nav class='navbar overview__navbar'>
-                <article class='brand'>
-                    <img class='brand__logo' src='./images/cloud.svg'>
+                <div class='brand'>
+                    <img class='brand__logo' src='./images/cloud.svg' alt ='cloudware logo'>
                     <p class='brand__name'>cloudbudget</p>
-                </article>
-                <menu class='menu'>
-                    <a class=menu__item>overview</a>
-                    <a class=menu__item>features</a>
-                    <a class=menu__item>technology</a>
-                    <a class=menu__item>contact</a>
-                    <a class=menu__item>sign up</a>
-                </menu>
-                <img class ='hamburger-menu navbar__hamburger-menu' src= './images/hamburger_menu.svg'>
+                </div>
+                <div class='menu'>
+                    <a class=menu__item href ='#overview'>overview</a>
+                    <a class=menu__item href ='#features'>features</a>
+                    <a class=menu__item href ='#technology'>technology</a>
+                    <a class=menu__item href = '#contact'>contact</a>
+                    <a class=menu__item href = '#signup'>sign up</a>
+                </div>
+                <img class ='hamburger-menu navbar__hamburger-menu' src= './images/hamburger_menu.svg' alt ='mobile menu'>
             </nav>
             <h1 class='overview__heading'>
                 Cloudbudget
@@ -41,7 +43,7 @@
         </section>
     </header>
     <main>
-        <section class='features'>
+        <section class='features' id='features'>
             <h2 class="heading_2 features__heading">features</h2>
             <div class='features__content'>
                 <article class='feature-card'><img src='./images/feature_1.jpg' alt='feature image 1'>
@@ -73,10 +75,9 @@
             </div>
         </section>
 
-        <section class='technology'>
+        <section class='technology' id ='technology'>
             <h2 class="heading_2 technology__heading">technology</h2>
             <div class='technology__content'>
-
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>01</span>
@@ -115,9 +116,7 @@
             </div>
         </section>
 
-
-       
-        <section class='mission'>
+        <section class='mission' id ='mission'>
             <div class='mission__content'>
                 <article class='introduction mission__introduction'>
                     <h2 class="heading_2 heading_left heading_phrase mission__heading">stay focused on saving money</h2>
@@ -170,7 +169,7 @@
             </div>
         </section>
 
-        <section class='contact'>
+        <section class='contact' id = 'contact'>
             <div class='contact__content'>
                 <article class='introduction contact__introduction'>
                     <h2 class="heading_2 contact__heading">contact</h2>
@@ -181,20 +180,16 @@
                     <input type="text" class='input input-small input-first' placeholder='First Name' name='firstname'
                         required>
                     <input type="text" class='input input-small' placeholder='Last Name' name='lastname' required>
-                    <input type="tel" id="phone" name="phone" placeholder='Phone Number' name='phonenumber'
+                    <input type="tel" id="phone"  placeholder='Phone Number' name='phone_number'
                         class='input input-large' required>
-                    <select name="services" id="services" class='input input-large input-select'
-                        placeholder='Phone Number' required>
+                    <select name="services" id="services" class='input input-large input-select'required>
                         <option value="" disabled selected>Select Services</option>
                         <option value="laundry">Money Laundry</option>
                         <option value="tax">Tax Optimisation</option>
                         <option value="plan">Income Planning</option>
                     </select>
-
-
                     <button class='button button--submit'>submit now</button>
                 </article>
-
             </div>
         </section>
 
