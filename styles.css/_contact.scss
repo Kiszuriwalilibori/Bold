@@ -1,0 +1,134 @@
+
+
+.contact {
+    width: 100%;
+    min-height: 500px;
+    background-color: #ffffff;
+    padding-top: 7.8vw;
+    color: #000000;
+    @include large{padding-top: 117px;}
+}
+
+.contact__heading{
+    margin-bottom: 7.8vw;
+    text-align:center;
+    @include large{text-align: left;}
+    @include tablet{margin-bottom: 60px;};
+    @include large{margin-bottom: 60px;}
+
+}
+.contact__content {
+    width: 100%;
+    max-width: 1110px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include large {
+        flex-direction: row;
+    }
+}
+
+
+.introduction {
+    width: 100%;
+
+    @include large {
+        width: 50%;
+        flex-grow: 1;
+    }
+}
+
+.actual-content {
+    flex-grow: 1;
+    width: 50%;
+}
+
+.contact__actual-content {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include large {
+        margin-left: -20px;
+        display: block;
+    }
+}
+
+
+.contact__introduction {
+
+    padding: unset;
+    margin: 0 auto;
+    padding-bottom: 4%;
+
+    @include large {
+        padding-left: 11px;
+        padding-right: $preface-horizontal-padding;
+    }
+}
+
+.introducing-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    padding: 0 1%;
+
+    @include large {
+        text-align: justify;
+        padding:unset;
+    }
+
+}
+
+.input {
+    border-radius: 6px;
+    border: 1px solid $color-dark;
+    height: 60px;
+    font-size: 16px;
+    padding-left: 30px;
+    margin-bottom: $input-space;
+    transition: 300ms all;
+
+    &:focus,
+    &:active {
+        outline: none;
+        border-color: $color-pinkey;
+    }
+
+    &.input-small {
+        width: 255px;
+        display: block;
+        float: left;
+    }
+
+    &.input-first {
+
+        margin-right: unset;
+
+        @include large {
+            margin-right: $input-space;
+        }
+    }
+
+    &.input-large {
+
+        width: 70vw;
+        @include tablet{ width: 540px;}
+        @include large { width: 540px;}
+        display: block;
+    }
+
+    &.input-select {
+        appearance: none;
+        background: url('../images/arrow_down.png') 96% / 2% no-repeat;
+    }
+
+}
+
+.input-select:required:invalid {
+    color: gray;
+}

@@ -1,0 +1,93 @@
+
+.mission{
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 122px;
+    background-color: #ED4C5C;
+    color: #ffffff;
+}
+.mission__heading{margin-bottom:60px;}
+.mission__content{
+    max-width: 1110px; 
+    width:100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap:wrap;
+    @include tablet{
+    flex-direction:column;
+}
+
+@include mobile{
+    flex-direction:column;
+}
+}
+
+.mission__introduction{
+    flex-grow: 1;
+    width: 50%;
+    padding-right: $preface-horizontal-padding;
+    @include tablet{padding-right:2%; padding-left:2%; width:unset;}
+    @include mobile{padding-right:2%; padding-left:2%; width:unset;}
+}
+.mission__logos{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    @include tablet{justify-content: center;}
+    @include mobile{justify-content: center;}
+}
+.mission__anchor{
+    margin-right: 24px;
+    cursor: pointer;
+}
+
+
+.mission-right{
+    flex-grow: 1;
+    width: 50%;
+    margin-left: -20px;
+    position:relative; margin-top: -120px;
+    
+    @include tablet{margin-top:unset; min-height:400px; margin-left:unset; width:unset;}
+    @include mobile{margin-top:unset; min-height:400px; margin-left:unset; width:unset;}
+}
+
+
+    .mission__image{
+        border-radius: 15px;
+        width: 383px;
+        height: 265px;
+        background-color:#C4C4C4;
+        opacity: 0.5;
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%) ;
+        
+        &--left{
+            background: url('../images/invisible-video-left.jpg') no-repeat center center fixed;
+            background-size:cover;
+             @include tablet{margin-left:2%;}
+             @include mobile{margin-left:2%;}
+             @include mobile{ width:50vw; height:34.5vw;}
+        }
+        &--right{
+            background: url('../images/invisible-video-right.jpg');
+            right:0;
+            @include tablet{margin-right:2%;}
+            @include mobile{margin-right:2%;}
+            @include mobile{ width:50vw; height:34.5vw;}
+        }
+        &--front{
+            background: url('../images/visible-video.jpg'); 
+            opacity:1;
+            z-index:1000;
+            left: 50%;
+            @include mobile{ width:50vw; height:34.5vw;}
+            transform: translate(-50%,-50%) scale(1.1618, 1.1641); 
+          
+    
+        }
+    }
+    
