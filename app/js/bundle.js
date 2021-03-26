@@ -5,6 +5,21 @@ function isFunction(x) {
   return Object.prototype.toString.call(x) == "[object Function]";
 }
 
+function getMapFromForm(form) {
+  try {
+    var myMap = new Map();
+    formData = new FormData(form);
+    for (var pair of formData.entries()) {
+      myMap.set(pair[0], pair[1]);
+    }
+
+    return myMap;
+  } catch (err) {
+    console.log('something is wrong in getMapFromForm function');
+    return null;
+  }
+}
+
 function isNode(o) {
   return typeof Node === "object" ? o instanceof Node : o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName === "string";
 }
@@ -21,9 +36,8 @@ function reportError(err) {
 }
 
 function getAttributeValue(target, attr) {
-  
-    const item = document.getElementById(target);
-    if(item){
+  const item = document.getElementById(target);
+  if (item) {
     const style = item.currentStyle || window.getComputedStyle(item);
     return style[attr] ? parseInt(style[attr], 10) : 0;
   } else {
@@ -35,6 +49,7 @@ module.exports = {
   isNode: isNode,
   reportError: reportError,
   getAttributeValue: getAttributeValue,
+  getMapFromForm: getMapFromForm,
   mountClickAndEnterHandler: function mountClickAndEnterHandler(item, fn) {
     try {
       if (!isNode(item)) {
@@ -66,19 +81,56 @@ module.exports = {
   },
 };
 
-},{"./throttle":4}],2:[function(require,module,exports){
+},{"./throttle":5}],2:[function(require,module,exports){
 const { prepareHamburgerMenuNew } = require("./prepareHamburgerMenuNew");
-
-
+const { prepareFormHandling } = require("./prepareFormHandling");
 
 window.onload = function () {
-    console.log('ondload fired')
-
+    
     const hamburgerMenu = document.getElementById("hamburger");
     const mobileMenu = document.querySelector(".mobile-menu");
+    const fields = Array.prototype.slice.call(document.getElementsByClassName("form__item"));
+    const form = document.getElementById("form");
+    const submitButton = document.getElementById("submit_button");
+    
     prepareHamburgerMenuNew(hamburgerMenu, mobileMenu);
+    prepareFormHandling(form, fields, submitButton);
+
 }
-},{"./prepareHamburgerMenuNew":3}],3:[function(require,module,exports){
+},{"./prepareFormHandling":3,"./prepareHamburgerMenuNew":4}],3:[function(require,module,exports){
+const { getMapFromForm } = require("./lib");
+
+module.exports = {
+  prepareFormHandling: function prepareFormHandling(form, fields, submitBtn) {
+    try {
+      if (!(form && fields && submitBtn)) {
+        throw new Error("form not defined");
+      }
+      fields.forEach(field => field.addEventListener("change", onChangeHandler));
+      fields.forEach(field => field.addEventListener("mouseout", onChangeHandler));
+      function onChangeHandler() {
+        const resultMap = getMapFromForm(form);
+        const resultArray = Array.from(resultMap.values());
+        isFormFilled = resultArray.every(item => item) && resultMap.size === 4;
+
+        if (isFormFilled) {
+          submitBtn.classList.add("button--active");
+          submitBtn.disabled ='false';
+
+        } else {
+          submitBtn.classList.remove("button--active");
+          submitBtn.disabled ='true';
+        }
+
+        console.log("entries", resultArray);
+        console.log("filled", isFormFilled);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  },
+};
+},{"./lib":1}],4:[function(require,module,exports){
 
 const { mountClickAndEnterHandler, throttled} = require("./lib");
 
@@ -111,7 +163,7 @@ module.exports = {
   },
 };
 
-},{"./lib":1}],4:[function(require,module,exports){
+},{"./lib":1}],5:[function(require,module,exports){
 module.exports = {
   throttle: function throttle(func, ms) {
     let isThrottled = false,

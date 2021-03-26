@@ -4,6 +4,21 @@ function isFunction(x) {
   return Object.prototype.toString.call(x) == "[object Function]";
 }
 
+function getMapFromForm(form) {
+  try {
+    var myMap = new Map();
+    formData = new FormData(form);
+    for (var pair of formData.entries()) {
+      myMap.set(pair[0], pair[1]);
+    }
+
+    return myMap;
+  } catch (err) {
+    console.log('something is wrong in getMapFromForm function');
+    return null;
+  }
+}
+
 function isNode(o) {
   return typeof Node === "object" ? o instanceof Node : o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName === "string";
 }
@@ -20,9 +35,8 @@ function reportError(err) {
 }
 
 function getAttributeValue(target, attr) {
-  
-    const item = document.getElementById(target);
-    if(item){
+  const item = document.getElementById(target);
+  if (item) {
     const style = item.currentStyle || window.getComputedStyle(item);
     return style[attr] ? parseInt(style[attr], 10) : 0;
   } else {
@@ -34,6 +48,7 @@ module.exports = {
   isNode: isNode,
   reportError: reportError,
   getAttributeValue: getAttributeValue,
+  getMapFromForm: getMapFromForm,
   mountClickAndEnterHandler: function mountClickAndEnterHandler(item, fn) {
     try {
       if (!isNode(item)) {

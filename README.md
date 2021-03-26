@@ -32,6 +32,9 @@
 
 -fixed 008, 011
 
+###
+partially done 018
+
 ### Todos
  
  ## 001 Process W3C Validation
@@ -41,7 +44,7 @@
  005 Revise input form and add patterns where appplicable
  ## 006 Add favicon
  ## 007 Restyle menu items
- 008 Prepare mobile menu
+ ##008 Prepare mobile menu
  009 purge  css.style
  ## 010 company name too big in mobile - nearly out of screen
  ## 011 minimise assets
@@ -51,7 +54,7 @@
  015 main image looks distorted/replaced
  ## 016 intro in overview out of visible screen
  ## 017 contact section no bottom padding
-
+ 018 add script for validation and mocking submit
 
 ### License
 

@@ -177,20 +177,22 @@
                     <p class="introducing-text">Questions or concerns? Just fill out the form below
                         and our support team will get back to you within 24 hours</p>
                 </article>
-                <article class='actual-content contact__actual-content'>
-                    <input type="text" class='input input-small input-first' placeholder='First Name' name='firstname'
+                <form class='actual-content contact__actual-content form' id="form">
+                    
+                    <input type="text" class='input input-small input-first form__item' placeholder='First Name' name='firstname'
                         required>
-                    <input type="text" class='input input-small' placeholder='Last Name' name='lastname' required>
+                    <input type="text" class='input input-small form__item' placeholder='Last Name' name='lastname' required>
                     <input type="tel" id="phone"  placeholder='Phone Number' name='phone_number'
-                        class='input input-large' required>
-                    <select name="services" id="services" class='input input-large input-select'required>
+                        class='input input-large form__item' required>
+                    <select name="services" id="services" class='input input-large input-select form__item'required>
                         <option value="" disabled selected>Select Services</option>
                         <option value="laundry">Money Laundry</option>
                         <option value="tax">Tax Optimisation</option>
                         <option value="plan">Income Planning</option>
                     </select>
-                    <button class='button button--submit contact__button'>submit now</button>
-                </article>
+                    <button id ='submit_button' class='button button--submit contact__button'>submit now</button>
+                </form>
+                <button class='message-box message-box--visible message-box--warning'>Dupa</button>
             </div>
         </section>
 

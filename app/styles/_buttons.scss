@@ -1,3 +1,30 @@
+.message-box {
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    visibility: hidden;
+    border: 2px solid black;
+
+    &--visible {
+        visibility: visible;
+    }
+
+    &--success {
+        background-color: $color-success;
+    }
+
+    &--failure {
+        background-color: $color-failure;
+    }
+
+    &--warning {
+        background-color: $color-warning;
+    }
+
+}
 
 .button {
     width: 160px;
@@ -12,20 +39,46 @@
     transition: 500ms all;
 
     &.button--submit {
-        @include pinkey;
-        color: $color-white;
+        background-color: $color-disabled;
+        border: 2px solid $color-disabled;
+        cursor: auto;
+        color: $color-number;
 
-        &:hover {
-            @include whitey;
-            color: $color-pinkey;
+        &.button--active {
+            @include pinkey;
+            color: $color-white;
+            cursor: pointer;
+            &:hover {
+                @include whitey;
+                color: $color-pinkey;
+            }
         }
     }
 
     &.button--signup {
         @include whitey;
         color: $color-pinkey;
+
         &:hover {
             transform: scale(1.05);
         }
     }
+
+    // &.button--report{
+
+    //     display: none;
+    //     &.button--report--visible{
+    //         display:block;
+    //         width:200px;
+    //     }
+    //     &.button--report--success{
+    //        background-color:
+    //     }
+    //     &.button--report--warning{
+    //        background-color:
+    //     }
+    //     &.button--report--failure{
+    //        background-color:
+    //     }
+
 }

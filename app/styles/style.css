@@ -152,6 +152,33 @@ option {
   text-align: center;
 }
 
+.message-box {
+  width: 200px;
+  height: 50px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  visibility: hidden;
+  border: 2px solid black;
+}
+
+.message-box--visible {
+  visibility: visible;
+}
+
+.message-box--success {
+  background-color: #49AF41;
+}
+
+.message-box--failure {
+  background-color: #C70001;
+}
+
+.message-box--warning {
+  background-color: #F78302;
+}
+
 .button {
   width: 160px;
   height: 50px;
@@ -167,11 +194,19 @@ option {
 }
 
 .button.button--submit {
-  background-color: #ED4C5C;
-  color: #ffffff;
+  background-color: #999999;
+  border: 2px solid #999999;
+  cursor: auto;
+  color: #ececec;
 }
 
-.button.button--submit:hover {
+.button.button--submit.button--active {
+  background-color: #ED4C5C;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.button.button--submit.button--active:hover {
   background-color: #ffffff;
   color: #ED4C5C;
 }
@@ -326,6 +361,7 @@ option {
   color: white;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8))), url("../images/background.jpg");
   background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../images/background.jpg");
+  background-size: cover;
 }
 
 .overview__heading {
