@@ -8,8 +8,9 @@ window.onload = function () {
     const fields = Array.prototype.slice.call(document.getElementsByClassName("form__item"));
     const form = document.getElementById("form");
     const submitButton = document.getElementById("submit_button");
+    const messageBox = document.getElementById("message_box");
     
     prepareHamburgerMenuNew(hamburgerMenu, mobileMenu);
-    prepareFormHandling(form, fields, submitButton);
+    prepareFormHandling(form, fields, submitButton, messageBox);
 
 }

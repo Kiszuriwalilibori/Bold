@@ -124,11 +124,11 @@
         width: calc(300px + 240 * ((100vw - 360px) / 408));
 
         @include tablet {
-            width: 540px;
+            width: $input-large
         }
 
         @include large {
-            width: 540px;
+            width: $input-large;
         }
 
         text-align: center;

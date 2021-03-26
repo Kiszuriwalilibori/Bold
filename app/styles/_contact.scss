@@ -33,19 +33,19 @@
 
 .introduction {
     width: 100%;
-
     @include large {
         width: 50%;
         flex-grow: 1;
     }
 }
 
-.actual-content {
+.form{
     flex-grow: 1;
     width: 50%;
+    &__button{margin-bottom:60px;}
 }
 
-.contact__actual-content {
+.contact__form{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -108,17 +108,15 @@
     &.input-first {
 
         margin-right: unset;
-
         @include large {
             margin-right: $input-space;
         }
     }
 
     &.input-large {
-
         width: 70vw;
-        @include tablet{ width: 540px;}
-        @include large { width: 540px;}
+        @include tablet{ width: $input-large;}
+        @include large { width: $input-large;}
         display: block;
     }
 
@@ -131,4 +129,16 @@
 
 .input-select:required:invalid {
     color: gray;
+}
+
+.form-buttons-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+    @include large{flex-direction: row; justify-content:space-between; width:540px;}
+    @include tablet{flex-direction: row; justify-content:space-between; width:540px;}
+    &__item{
+        margin: 15px 0 30px 0;
+    }
 }

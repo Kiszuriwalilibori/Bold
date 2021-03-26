@@ -110,7 +110,6 @@ option {
   height: 50px;
   border-radius: 6px;
   outline: none;
-  border: none;
   border: 2px solid #ED4C5C;
   font-size: 14px;
   text-transform: uppercase;
@@ -451,14 +450,18 @@ option {
   }
 }
 
-.actual-content {
+.form {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   width: 50%;
 }
 
-.contact__actual-content {
+.form__button {
+  margin-bottom: 60px;
+}
+
+.contact__form {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,7 +476,7 @@ option {
 }
 
 @media (min-width: 1130px) {
-  .contact__actual-content {
+  .contact__form {
     margin-left: -20px;
     display: block;
   }
@@ -565,6 +568,52 @@ option {
 
 .input-select:required:invalid {
   color: gray;
+}
+
+.form-buttons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@media (min-width: 1130px) {
+  .form-buttons-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1129px) {
+  .form-buttons-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 540px;
+  }
+}
+
+.form-buttons-container__item {
+  margin: 15px 0 30px 0;
 }
 
 .technology {

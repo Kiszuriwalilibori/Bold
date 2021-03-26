@@ -3,6 +3,9 @@ const { throttle } = require("./throttle");
 function isFunction(x) {
   return Object.prototype.toString.call(x) == "[object Function]";
 }
+const getRandomBoolean = ()=>Math.random() >= 0.5;
+
+
 
 function getMapFromForm(form) {
   try {
@@ -18,6 +21,13 @@ function getMapFromForm(form) {
     return null;
   }
 }
+
+
+
+
+
+
+
 
 function isNode(o) {
   return typeof Node === "object" ? o instanceof Node : o && typeof o === "object" && typeof o.nodeType === "number" && typeof o.nodeName === "string";
@@ -45,6 +55,7 @@ function getAttributeValue(target, attr) {
 }
 
 module.exports = {
+  getRandomBoolean:getRandomBoolean,
   isNode: isNode,
   reportError: reportError,
   getAttributeValue: getAttributeValue,
