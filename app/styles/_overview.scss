@@ -7,7 +7,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    &__hamburger-menu{margin-right: 69px; transform:translateX(50%);}
+
+    &__hamburger-menu {
+
+        position: fixed;
+        z-index: 3000;
+        top: 40px;
+        right: 40px;
+    }
 }
 
 .brand {
@@ -21,7 +28,8 @@
         margin-right: 10px;
         margin-left: 10px;
     }
-    &__name{
+
+    &__name {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 18px;
@@ -29,28 +37,59 @@
 }
 
 .menu {
-    display:none;
-    @include tablet{display:block;}
-    @include large {display:block;}
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+
+    @include large {
+        display: block;
+    }
+
     &__item {
         font-weight: bold;
-        display:inline-block;
+        display: inline-block;
         font-size: 14px;
         line-height: 17px;
         font-weight: bold;
         text-transform: uppercase;
         margin: 0 10px;
-        color:white;
-        text-decoration:none;
+        color: white;
+        text-decoration: none;
         transition: transform 500ms;
-        &:hover{transform: scale(1.1);}
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--large {
+            font-size: 24px;
+        }
+
     }
 }
-.hamburger-menu{
-    display:block;
-    @include tablet{display:none;}
-    @include large {display:none;}
-    &.hidden{display:none;}
+
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        animation: rotate 2s infinite linear;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include large {
+        display: none;
+    }
+
+    &.hidden {
+        display: none;
+    }
 }
 
 .overview {
@@ -63,34 +102,65 @@
     background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background.jpg');
 
     &__heading {
-       
+
         text-transform: uppercase;
         text-align: center;
         line-height: 86px;
         letter-spacing: 0.05em;
         font-size: calc(30px + 42 * ((100vw - 360px) / 408));
-        @include tablet{font-size: 72px;}
-        @include large{font-size: 72px;}
-       
+
+        @include tablet {
+            font-size: 72px;
+        }
+
+        @include large {
+            font-size: 72px;
+        }
+
     }
 
     &__intro {
         width: calc(300px + 240 * ((100vw - 360px) / 408));
-        @include tablet{width:540px;}
-        @include large{width: 540px;}
+
+        @include tablet {
+            width: 540px;
+        }
+
+        @include large {
+            width: 540px;
+        }
+
         text-align: center;
         margin: 39px 0;
         display: block;
         font-weight: 600;
         font-size: 24px;
         font-size: calc(18px + 6 * ((100vw - 360px) / 408));
-        @include tablet{font-size: 24px;}
-        @include large{font-size: 24px;}
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include large {
+            font-size: 24px;
+        }
+
         line-height: 150%;
         padding-bottom: 16px;
     }
+
     &__navbar {
         margin: 17px auto 140px auto;
     }
+}
 
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }

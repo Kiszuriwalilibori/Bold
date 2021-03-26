@@ -6,14 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Piotr Maksymiuk" />
-    <link rel="stylesheet" href="./styles.css/main.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <title>Bold recruitment task by Piotr Maksymiuk</title>
     <meta name="description" content='application that present skills' />
     <meta property="og:title" content="Bold recruitment task by Piotr Maksymiuk" />
     <meta property="og:type" content="Web Application" />
     <meta property="og:url" content="http://kiszuriwalilibori.github.io/bold" />
-    <meta name="version" content="1.0.2">
+    <meta name="version" content="1.0.3">
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <script src="./js/bundle.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
                     <a class=menu__item href = '#contact'>contact</a>
                     <a class=menu__item href = '#signup'>sign up</a>
                 </div>
-                <img class ='hamburger-menu navbar__hamburger-menu' src= './images/hamburger_menu.svg' alt ='mobile menu'>
+                <img id ='hamburger' class ='hamburger-menu navbar__hamburger-menu' src= './images/hamburger_menu.svg' alt ='mobile menu'>
             </nav>
             <h1 class='overview__heading'>
                 Cloudbudget
@@ -193,13 +194,15 @@
             </div>
         </section>
 
-
-
-
-
-
-
-
+        <div class='mobile-menu'>
+            <div class="mobile-menu__items">
+                <a class='menu__item menu__item--large' href ='#overview'>overview</a>
+                <a class= 'menu__item menu__item--large' href ='#features'>features</a>
+                <a class='menu__item menu__item--large' href ='#technology'>technology</a>
+                <a class= 'menu__item menu__item--large' href = '#contact'>contact</a>
+                <a class= 'menu__item menu__item--large' href = '#signup'>sign up</a>
+            </div>
+          </div>
 
     </main>
 
