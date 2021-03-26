@@ -7,6 +7,7 @@
     padding-top: 7.8vw;
     color: #000000;
     @include large{padding-top: 117px;}
+    &__button{margin-bottom:60px;}
 }
 
 .contact__heading{

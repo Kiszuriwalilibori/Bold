@@ -23,6 +23,11 @@
 - initial
 ### 1.0.1 
 - fixed 001, 002, 003, 004, 006, 007
+
+### 1.0.2
+-fixed 010, 016, 017
+-partially fixed 009
+
 ### Todos
  
  ## 001 Process W3C Validation
@@ -33,6 +38,15 @@
  005 Revise input form and add patterns where appplicable
  ## 006 Add favicon
  ## 007 Restyle menu items
+ 009 purge  css.style
+ ## 010 company name too big in mobile - nearly out of screen
+ 011 minimise asstes
+ 012 detailed revision of sizes/distance
+ 013 content in mission seem to have strange distancing
+ 014 more compact css
+ 015 main image looks distorted/replaced
+ ## 016 intro in overview out of visible screen
+ 017 contact section no bottom padding
 
 ### License
 

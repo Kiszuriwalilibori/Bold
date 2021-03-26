@@ -63,20 +63,29 @@
     background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background.jpg');
 
     &__heading {
-        font-size: 72px;
+       
         text-transform: uppercase;
         text-align: center;
         line-height: 86px;
         letter-spacing: 0.05em;
+        font-size: calc(30px + 42 * ((100vw - 360px) / 408));
+        @include tablet{font-size: 72px;}
+        @include large{font-size: 72px;}
+       
     }
 
     &__intro {
-        width: 540px;
+        width: calc(300px + 240 * ((100vw - 360px) / 408));
+        @include tablet{width:540px;}
+        @include large{width: 540px;}
         text-align: center;
         margin: 39px 0;
         display: block;
         font-weight: 600;
         font-size: 24px;
+        font-size: calc(18px + 6 * ((100vw - 360px) / 408));
+        @include tablet{font-size: 24px;}
+        @include large{font-size: 24px;}
         line-height: 150%;
         padding-bottom: 16px;
     }
