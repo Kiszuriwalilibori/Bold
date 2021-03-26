@@ -12,11 +12,15 @@
     <meta property="og:title" content="Bold recruitment task by Piotr Maksymiuk" />
     <meta property="og:type" content="Web Application" />
     <meta property="og:url" content="http://kiszuriwalilibori.github.io/bold" />
-    <meta name="version" content="1.0.5">
+    <meta name="version" content="1.0.6">
     <link rel="preload" href="./styles/fonts/lato-v17-latin-700.woff2" type='font/woff2' as="font"
         crossorigin='anonymous' />
     <link rel="preload" href="./styles/fonts/lato-v17-latin-regular.woff2" type='font/woff2' as="font"
         crossorigin='anonymous' />
+    <link rel="preload" media="(min-width: 1130px)" href="./images/background_large.jpg" as="image" />
+    <link rel="preload" media="(max-width: 768px)" href="./images/background_mobile.jpg" as="image" />
+
+    <link rel="preload" href="./graphics/textures/broken-noise.webp" as="image" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <script src="./js/bundle.js" defer></script>
 </head>
@@ -27,7 +31,7 @@
         <section class='overview'>
             <nav class='navbar overview__navbar'>
                 <div class='brand'>
-                    <img class='brand__logo' src='./images/cloud.svg' alt='cloudware logo'>
+                    <img class='brand__logo' src='./images/cloud.svg' alt='cloudware logo' loading=lazy>
                     <p class='brand__name'>cloudbudget</p>
                 </div>
                 <div class='menu'>
@@ -38,7 +42,7 @@
                     <a class=menu__item href='#signup'>sign up</a>
                 </div>
                 <img id='hamburger' class='hamburger-menu navbar__hamburger-menu' src='./images/hamburger_menu.svg'
-                    alt='mobile menu'>
+                    alt='mobile menu' loading=lazy>
             </nav>
             <h1 class='overview__heading'>
                 Cloudbudget
@@ -52,7 +56,7 @@
         <section class='features' id='features'>
             <h2 class="heading_2 features__heading">features</h2>
             <div class='features__content'>
-                <article class='feature-card'><img src='./images/feature_1.jpg' alt='feature image 1'>
+                <article class='feature-card'><img src='./images/feature_1.jpg' alt='feature image 1' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Supports All Currencies and Cards</h3>
                         <p class='feature-card__description'>We support all popular currencies and is fully customizable
@@ -61,7 +65,7 @@
                         <a class='readmore' href=''>Read More</a>
                     </div>
                 </article>
-                <article class='feature-card'><img src='./images/feature_2.jpg' alt='feature image 2'>
+                <article class='feature-card'><img src='./images/feature_2.jpg' alt='feature image 2' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Manage your expenses on the go</h3>
                         <p class='feature-card__description'>You can access your account from anywhere in the world on
@@ -70,7 +74,7 @@
                         <a class='readmore' href=''>Read More</a>
                     </div>
                 </article>
-                <article class='feature-card'><img src='./images/feature_3.jpg' alt='feature image 3'>
+                <article class='feature-card'><img src='./images/feature_3.jpg' alt='feature image 3' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Cloud Budget Management Software</h3>
                         <p class='feature-card__description'>Our software is made so you can access and manage your
@@ -87,7 +91,7 @@
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>01</span>
-                        <img class='technology-item__logo' src='./images/Technology_1.svg' alt='cloud storage logo'>
+                        <img class='technology-item__logo' src='./images/Technology_1.svg' alt='cloud storage logo' loading=lazy>
                     </div>
                     <h3 class='heading_3 heading--capitalized'>cloud storage</h3>
                     <p class='technology-item__feature'>Access your account from anywhere in the world on any device</p>
@@ -96,7 +100,7 @@
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>02</span>
-                        <img class='technology-item__logo' src='./images/Technology_2.svg' alt='secure logo'>
+                        <img class='technology-item__logo' src='./images/Technology_2.svg' alt='secure logo' loading=lazy>
                     </div>
                     <h3 class='heading_3 heading--capitalized'>secure</h3>
                     <p class='technology-item__feature'>All your information is stored on secure cloud servers</p>
@@ -105,7 +109,7 @@
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>03</span>
-                        <img class='technology-item__logo' src='./images/Technology_3.svg' alt='pdf logo'>
+                        <img class='technology-item__logo' src='./images/Technology_3.svg' alt='pdf logo' loading=lazy>
                     </div>
                     <h3 class='heading_3 heading--capitalized'>PDF download</h3>
                     <p class='technology-item__feature'>Download any of your reports in PDF format</p>
@@ -114,7 +118,7 @@
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>04</span>
-                        <img class='technology-item__logo' src='./images/Technology_4.svg' alt='csv logo'>
+                        <img class='technology-item__logo' src='./images/Technology_4.svg' alt='csv logo' loading=lazy>
                     </div>
                     <h3 class='heading_3 heading--capitalized'>CSV download</h3>
                     <p class='technology-item__feature'>All your information is stored on secure cloud servers</p>
@@ -168,7 +172,6 @@
 
                 </article>
                 <article class='mission-right'>
-
                     <div class='mission__image mission__image--left'></div>
                     <div class='mission__image mission__image--front'></div>
                     <div class='mission__image mission__image--right'></div>
@@ -181,8 +184,7 @@
                 <article class='introduction contact__introduction'>
                     <h2 class="heading_2 heading--left contact__heading">contact</h2>
                     <p class="introducing-text">Questions or concerns? Just fill out the form below
-                        and our support team will get back to you within 24 hours</p>
-                    
+                        and our support team will get back to you within 24 hours</p>    
                 </article>
 
                 <form class='form contact__form' id="form">
@@ -202,10 +204,7 @@
                         <button type ="submit" id='submit_button' class='button button--submit form-buttons-container__item' disabled>submit now</button>
                         <button class='message-box form-buttons-container__item' id='message_box'></button>
                     </div>
-                    
-
                 </form>
-
             </div>
         </section>
 

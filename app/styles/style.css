@@ -284,9 +284,30 @@ option {
           justify-content: flex-start;
   min-height: 782px;
   color: white;
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8))), url("../images/background.jpg");
-  background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../images/background.jpg");
+  background-position: center center;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .overview {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8))), url("../images/background_mobile.jpg");
+    background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../images/background_mobile.jpg");
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1129px) {
+  .overview {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8))), url("../images/background_tablet.jpg");
+    background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../images/background_tablet.jpg");
+  }
+}
+
+@media (min-width: 1130px) {
+  .overview {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(213, 32, 71, 0.8)), to(rgba(238, 61, 27, 0.8))), url("../images/background_large.jpg");
+    background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url("../images/background_large.jpg");
+  }
 }
 
 .overview__heading {

@@ -32,10 +32,15 @@
 
 -fixed 008, 011
 
-### 1.04
+### 1.0.4
 partially done 018
 -fixed 009, 019
 
+### 1.0.5
+done 018
+
+### 1.0.6
+-fixed 015, 020, 021, 022
 ### Todos
  
  ## 001 Process W3C Validation
@@ -52,12 +57,12 @@ partially done 018
  012 detailed revision of sizes/distance
  013 content in mission seem to have strange distancing
  014 more compact css
- 015 main image looks distorted/replaced
+ ## 015 main image looks distorted/replaced
  ## 016 intro in overview out of visible screen
  ## 017 contact section no bottom padding
- 018 add script for validation and mocking submit
+ ## 018 add script for validation and mocking submit
  ## 019 display swap and preload fonts
-
-### License
-
-This software is distributed under MIT license
+ ## 020 preloading of main image 
+ ## 021 main image in versions dependent on viewport size
+ ## 022 lazy loading of some images in document body
+ 
