@@ -41,6 +41,10 @@ done 018
 
 ### 1.0.6
 -fixed 015, 020, 021, 022
+
+### 1.0.7
+-fixed 013
+
 ### Todos
  
  ## 001 Process W3C Validation
@@ -55,7 +59,7 @@ done 018
  ## 010 company name too big in mobile - nearly out of screen
  ## 011 minimise assets
  012 detailed revision of sizes/distance
- 013 content in mission seem to have strange distancing
+ ## 013 content in mission seem to have strange distancing
  014 more compact css
  ## 015 main image looks distorted/replaced
  ## 016 intro in overview out of visible screen

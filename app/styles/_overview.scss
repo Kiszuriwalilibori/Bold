@@ -97,20 +97,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 782px;
+    height: 500px;
+    @include tablet{min-height: 782px;}
+    @include large{min-height: 782px;}
     color: white;
-
-    //background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background.jpg');
     @include mobile{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_mobile.jpg');}
     @include tablet{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_tablet.jpg');}
     @include large{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_large.jpg'); }
-    
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-
-
-
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     &__heading {
 
@@ -162,7 +158,10 @@
     }
 
     &__navbar {
-        margin: 17px auto 140px auto;
+        margin: 17px;
+        @include tablet{margin: 17px auto 140px auto;}
+        @include large {margin: 17px auto 140px auto;}
+
     }
 }
 

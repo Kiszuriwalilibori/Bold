@@ -3,7 +3,8 @@
     min-height: 500px;
     display: flex;
     flex-direction: row;
-    padding-top: 122px;
+    padding-top: 60px;
+    @include large {padding-top: 122px;}
     background-color: #ED4C5C;
     color: #ffffff;
 }

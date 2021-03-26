@@ -282,11 +282,23 @@ option {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  min-height: 782px;
+  height: 500px;
   color: white;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media (min-width: 768px) and (max-width: 1129px) {
+  .overview {
+    min-height: 782px;
+  }
+}
+
+@media (min-width: 1130px) {
+  .overview {
+    min-height: 782px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -368,7 +380,19 @@ option {
 }
 
 .overview__navbar {
-  margin: 17px auto 140px auto;
+  margin: 17px;
+}
+
+@media (min-width: 768px) and (max-width: 1129px) {
+  .overview__navbar {
+    margin: 17px auto 140px auto;
+  }
+}
+
+@media (min-width: 1130px) {
+  .overview__navbar {
+    margin: 17px auto 140px auto;
+  }
 }
 
 @-webkit-keyframes rotate {
@@ -397,7 +421,7 @@ option {
   width: 100%;
   min-height: 500px;
   background-color: #ffffff;
-  padding-top: 7.8vw;
+  padding-top: 60px;
   color: #000000;
 }
 
@@ -812,9 +836,15 @@ option {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 122px;
+  padding-top: 60px;
   background-color: #ED4C5C;
   color: #ffffff;
+}
+
+@media (min-width: 1130px) {
+  .mission {
+    padding-top: 122px;
+  }
 }
 
 .mission__heading {
