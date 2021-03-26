@@ -3,6 +3,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url("./fonts/lato-v17-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local(""), url("./fonts/lato-v17-latin-regular.eot?#iefix") format("embedded-opentype"), url("./fonts/lato-v17-latin-regular.woff2") format("woff2"), url("./fonts/lato-v17-latin-regular.woff") format("woff"), url("./fonts/lato-v17-latin-regular.ttf") format("truetype"), url("./fonts/lato-v17-latin-regular.svg#Lato") format("svg");
@@ -14,6 +15,7 @@
   font-family: 'Lato';
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url("./fonts/lato-v17-latin-700.eot");
   /* IE9 Compat Modes */
   src: local(""), url("./fonts/lato-v17-latin-700.eot?#iefix") format("embedded-opentype"), url("./fonts/lato-v17-latin-700.woff2") format("woff2"), url("./fonts/lato-v17-latin-700.woff") format("woff"), url("./fonts/lato-v17-latin-700.ttf") format("truetype"), url("./fonts/lato-v17-latin-700.svg#Lato") format("svg");
@@ -31,72 +33,37 @@ body {
   font-family: 'Lato';
 }
 
-.left-aligned {
-  text-align: left;
+option[value=""][disabled] {
+  display: none;
 }
 
-.text-white {
-  color: #ffffff;
-}
-
-.section {
-  width: 100%;
-  min-height: 500px;
-  padding-top: 60px;
-}
-
-.preface__intro {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 140%;
-  text-align: justify;
-}
-
-.preface__logos {
-  margin-top: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media (min-width: 768px) and (max-width: 1129px) {
-  .preface__logos {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.preface__anchor {
-  margin-right: 24px;
-  cursor: pointer;
+option {
+  color: black;
 }
 
 .heading_2 {
   font-size: 36px;
   text-transform: capitalize;
   text-align: center;
+  font-weight: 600;
   margin-bottom: 60px;
 }
 
-.heading_2.heading_left {
+.heading_2.heading--left {
   text-align: center;
 }
 
 @media (min-width: 1130px) {
-  .heading_2.heading_left {
+  .heading_2.heading--left {
     text-align: left;
   }
 }
 
-.heading_2.heading_left.heading_phrase {
+.heading_2.heading--left.heading--phrase-style {
   text-transform: none;
 }
 
-.heading_2.heading_left.heading_phrase::first-letter {
+.heading_2.heading--left.heading--phrase-style::first-letter {
   text-transform: capitalize;
 }
 
@@ -107,49 +74,8 @@ body {
   line-height: 21.6px;
 }
 
-.heading_3.capitalized {
+.heading_3.heading--capitalized {
   text-transform: capitalize;
-}
-
-.section__left-column {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 50%;
-}
-
-.section__right-column {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 50%;
-  margin-left: -20px;
-}
-
-option[value=""][disabled] {
-  display: none;
-}
-
-option {
-  color: black;
-}
-
-.section__content {
-  width: 100%;
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.textarea__content, .technology-item__feature {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  margin: 20px 5px 0px 5px;
-  text-align: center;
 }
 
 .message-box {
@@ -369,6 +295,7 @@ option {
   text-align: center;
   line-height: 86px;
   letter-spacing: 0.05em;
+  font-weight: 700;
   font-size: calc(30px + 42 * ((100vw - 360px) / 408));
 }
 
@@ -703,6 +630,11 @@ option {
 }
 
 .technology-item__feature {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 20px 5px 0px 5px;
+  text-align: center;
   margin: 20px 0 0 0;
 }
 

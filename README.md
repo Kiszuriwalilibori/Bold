@@ -32,8 +32,9 @@
 
 -fixed 008, 011
 
-###
+### 1.04
 partially done 018
+-fixed 009, 019
 
 ### Todos
  
@@ -44,8 +45,8 @@ partially done 018
  005 Revise input form and add patterns where appplicable
  ## 006 Add favicon
  ## 007 Restyle menu items
- ##008 Prepare mobile menu
- 009 purge  css.style
+ ## 008 Prepare mobile menu
+ ## 009 purge  css.style
  ## 010 company name too big in mobile - nearly out of screen
  ## 011 minimise assets
  012 detailed revision of sizes/distance
@@ -55,6 +56,7 @@ partially done 018
  ## 016 intro in overview out of visible screen
  ## 017 contact section no bottom padding
  018 add script for validation and mocking submit
+ ## 019 display swap and preload fonts
 
 ### License
 

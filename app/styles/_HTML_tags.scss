@@ -7,3 +7,13 @@
 body {
     font-family: 'Lato';
 }
+
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: black;
+}
+
