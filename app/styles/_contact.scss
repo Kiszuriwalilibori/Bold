@@ -52,6 +52,8 @@
 
     @include large {
         display: block;
+        position:relative;
+        left: calc(0px + 35 * ((100vw - 1130px) / 310));
     }
 }
 

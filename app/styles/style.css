@@ -523,6 +523,8 @@ option {
 @media (min-width: 1130px) {
   .contact__form {
     display: block;
+    position: relative;
+    left: calc(0px + 35 * ((100vw - 1130px) / 310));
   }
 }
 
