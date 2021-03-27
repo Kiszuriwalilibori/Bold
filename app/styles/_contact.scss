@@ -1,4 +1,3 @@
-
 .contact {
     width: 100%;
     min-height: 500px;
@@ -52,7 +51,6 @@
     align-items: center;
 
     @include large {
-        margin-left: -20px;
         display: block;
     }
 }
@@ -99,13 +97,13 @@
         border-color: $color-pinkey;
     }
 
-    &.input-small {
+    &.input--small {
         width: 255px;
         display: block;
         float: left;
     }
 
-    &.input-first {
+    &.input--first {
 
         margin-right: unset;
         @include large {
@@ -113,21 +111,21 @@
         }
     }
 
-    &.input-large {
+    &.input--large {
         width: 70vw;
         @include tablet{ width: $input-large;}
         @include large { width: $input-large;}
         display: block;
     }
 
-    &.input-select {
+    &.input--select {
         appearance: none;
         background: url('../images/arrow_down.png') 96% / 2% no-repeat;
     }
 
 }
 
-.input-select:required:invalid {
+.input--select:required:invalid {
     color: gray;
 }
 

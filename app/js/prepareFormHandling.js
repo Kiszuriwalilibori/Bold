@@ -64,7 +64,7 @@ module.exports = {
               break;
             default: {
               messageBox.classList.add("message-box--visible", "message-box--failure");
-              messageBox.innerText = "Niestety nie udło się dostarczyć danych";
+              messageBox.innerText = "Niestety nie udało się dostarczyć danych";
             }
           }
         }

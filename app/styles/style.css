@@ -522,7 +522,6 @@ option {
 
 @media (min-width: 1130px) {
   .contact__form {
-    margin-left: -20px;
     display: block;
   }
 }
@@ -571,47 +570,47 @@ option {
   border-color: #ED4C5C;
 }
 
-.input.input-small {
+.input.input--small {
   width: 255px;
   display: block;
   float: left;
 }
 
-.input.input-first {
+.input.input--first {
   margin-right: unset;
 }
 
 @media (min-width: 1130px) {
-  .input.input-first {
+  .input.input--first {
     margin-right: 30px;
   }
 }
 
-.input.input-large {
+.input.input--large {
   width: 70vw;
   display: block;
 }
 
 @media (min-width: 768px) and (max-width: 1129px) {
-  .input.input-large {
+  .input.input--large {
     width: 540px;
   }
 }
 
 @media (min-width: 1130px) {
-  .input.input-large {
+  .input.input--large {
     width: 540px;
   }
 }
 
-.input.input-select {
+.input.input--select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background: url("../images/arrow_down.png") 96%/2% no-repeat;
 }
 
-.input-select:required:invalid {
+.input--select:required:invalid {
   color: gray;
 }
 
@@ -877,7 +876,6 @@ option {
 
 .mission__introduction {
   padding-right: 2%;
-  padding-left: 2%;
   width: unset;
 }
 
@@ -902,6 +900,14 @@ option {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 1130px) {
+  .mission__logos {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
 }
 
 .mission__anchor {
@@ -966,12 +972,12 @@ option {
 .mission__image--left {
   background: url("../images/invisible-video-left.jpg") no-repeat center center fixed;
   background-size: cover;
-  margin-left: 2%;
+  margin-left: 4%;
 }
 
 @media (min-width: 1130px) {
   .mission__image--left {
-    margin-left: unset;
+    margin-left: 20px;
   }
 }
 
@@ -979,12 +985,12 @@ option {
   background: url("../images/invisible-video-right.jpg") no-repeat center center fixed;
   background-size: cover;
   right: 0;
-  margin-right: 2%;
+  margin-right: 4%;
 }
 
 @media (min-width: 1130px) {
   .mission__image--right {
-    margin-right: unset;
+    margin-right: 20px;
   }
 }
 

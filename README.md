@@ -45,13 +45,16 @@ done 018
 ### 1.0.7
 -fixed 013
 
+### 1.0.8
+- 012 detailed revision of sizes/distance
+
 ### Todos
  
  ## 001 Process W3C Validation
  ## 002 Add actually working menu links
  ## 003 Add hamburger menu
  ## 004 Add versioning to HTML head
- 005 Revise input form and add patterns where appplicable
+ ## 005 Revise input form and add patterns where appplicable
  ## 006 Add favicon
  ## 007 Restyle menu items
  ## 008 Prepare mobile menu

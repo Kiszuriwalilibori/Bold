@@ -2,11 +2,11 @@
     background-color: #FAFAFA;
     min-height: 660px;
     width: 100%;
-    padding-top: 60px;
+    padding-top: $regular-padding;
 }
 
 .features__heading {
-    margin-bottom: 60px;
+    margin-bottom: $regular-padding;
 }
 
 .features__content {
