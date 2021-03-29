@@ -1,4 +1,3 @@
-
 @mixin pinkey {
     background-color: $color-pinkey;
 }
@@ -7,8 +6,8 @@
     background-color: $color-white;
 }
 
-@mixin horizontally_centered{
-    position:absolute;
+@mixin horizontally_centered {
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -32,4 +31,17 @@
     @media (min-width: #{$breakLarge}) {
         @content;
     }
+}
+
+
+@mixin flex-column-align-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin flex-row-align-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

@@ -49,7 +49,11 @@ module.exports = {
           const errorsString = Array.from(nonValidated.keys()).toString();
           messageBox.classList.add("message-box--visible", "message-box--warning");
           messageBox.innerText = `Niezwalidowano ${errorsString}`;
-          setTimeout(clearMessage, 3000);
+          const errorsIdArray = Array.from(nonValidated.keys());
+          errorsIdArray.forEach(id => {
+            document.getElementsByName(id)[0].classList.add("form__input--not-validated");
+          });
+          setTimeout(() => clearMessage(errorsIdArray), 3000);
         } else {
           const random = getRandomBoolean();
           setTimeout(clearMessage, 3000);
@@ -57,10 +61,11 @@ module.exports = {
             case true:
               messageBox.classList.add("message-box--visible", "message-box--success");
               messageBox.innerText = "Pomyślnie dostarczono dane";
+              form.reset();
               break;
             case false:
               messageBox.classList.add("message-box--visible", "message-box--failure");
-              messageBox.innerText = "Niestety nie udło się dostarczyć danych";
+              messageBox.innerText = "Niestety nie udało się dostarczyć danych";
               break;
             default: {
               messageBox.classList.add("message-box--visible", "message-box--failure");
@@ -69,8 +74,12 @@ module.exports = {
           }
         }
 
-        function clearMessage() {
-          messageBox.classList.remove("message-box--visible", "message-box--failure", "message-box--success");
+        function clearMessage(Ary) {
+          messageBox.classList.remove("message-box--visible", "message-box--failure", "message-box--success", "message-box--warning");
+          Ary.forEach(id => {
+            console.log(id);
+            document.getElementsByName(id)[0].classList.remove("form__input--not-validated");
+          });
         }
       }
 

@@ -1,11 +1,83 @@
+
+
+.overview-section {
+    
+    @include flex-column-align-center;
+    justify-content: flex-start;
+    height: 500px;
+    @include tablet{min-height: 782px;}
+    @include large{min-height: 782px;}
+    color: white;
+    @include mobile{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_mobile.jpg');}
+    @include tablet{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_tablet.jpg');}
+    @include large{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_large.jpg'); }
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__heading {
+
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 86px;
+        letter-spacing: 0.05em;
+        font-weight: 700;
+        font-size: calc(30px + 42 * ((100vw - 360px) / 408));
+
+        @include tablet {
+            font-size: 72px;
+        }
+
+        @include large {
+            font-size: 72px;
+        }
+
+    }
+
+    &__intro {
+        width: calc(300px + 240 * ((100vw - 360px) / 408));
+
+        @include tablet {
+            width: $input-large
+        }
+
+        @include large {
+            width: $input-large;
+        }
+
+        text-align: center;
+        margin: 39px 0;
+        display: block;
+        font-weight: 600;
+        font-size: 24px;
+        font-size: calc(18px + 6 * ((100vw - 360px) / 408));
+
+        @include tablet {
+            font-size: 24px;
+        }
+
+        @include large {
+            font-size: 24px;
+        }
+
+        line-height: 150%;
+        padding-bottom: 16px;
+    }
+
+    &__navbar {
+        margin: 17px;
+        @include tablet{margin: 17px auto 140px auto;}
+        @include large {margin: 17px auto 140px auto;}
+
+    }
+}
+
 .navbar {
     width: 100%;
     max-width: 1135px;
     height: 100px;
     padding: 41px 0 37px 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex-row-align-center;
     justify-content: space-between;
 
     &__hamburger-menu {
@@ -18,9 +90,8 @@
 }
 
 .brand {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
+    @include flex-row-align-center;
     justify-content: flex-start;
     line-height: 22px;
 
@@ -89,79 +160,6 @@
 
     &.hidden {
         display: none;
-    }
-}
-
-.overview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 500px;
-    @include tablet{min-height: 782px;}
-    @include large{min-height: 782px;}
-    color: white;
-    @include mobile{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_mobile.jpg');}
-    @include tablet{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_tablet.jpg');}
-    @include large{background-image: linear-gradient(to right, rgba(213, 32, 71, 0.8) 0%, rgba(238, 61, 27, 0.8) 100%), url('../images/background_large.jpg'); }
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    &__heading {
-
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 86px;
-        letter-spacing: 0.05em;
-        font-weight: 700;
-        font-size: calc(30px + 42 * ((100vw - 360px) / 408));
-
-        @include tablet {
-            font-size: 72px;
-        }
-
-        @include large {
-            font-size: 72px;
-        }
-
-    }
-
-    &__intro {
-        width: calc(300px + 240 * ((100vw - 360px) / 408));
-
-        @include tablet {
-            width: $input-large
-        }
-
-        @include large {
-            width: $input-large;
-        }
-
-        text-align: center;
-        margin: 39px 0;
-        display: block;
-        font-weight: 600;
-        font-size: 24px;
-        font-size: calc(18px + 6 * ((100vw - 360px) / 408));
-
-        @include tablet {
-            font-size: 24px;
-        }
-
-        @include large {
-            font-size: 24px;
-        }
-
-        line-height: 150%;
-        padding-bottom: 16px;
-    }
-
-    &__navbar {
-        margin: 17px;
-        @include tablet{margin: 17px auto 140px auto;}
-        @include large {margin: 17px auto 140px auto;}
-
     }
 }
 

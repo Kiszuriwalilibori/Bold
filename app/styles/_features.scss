@@ -1,29 +1,29 @@
-.features {
+.features-section {
     background-color: #FAFAFA;
     min-height: 660px;
     width: 100%;
     padding-top: $regular-padding;
-}
-
-.features__heading {
-    margin-bottom: $regular-padding;
-}
-
-.features__content {
-
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 0 10px;
-
-    @include large {
-        justify-content: center;
+    &__card{
+        position: relative;
+        margin-bottom: 150px;
+        &:nth-child(2){margin-left: 30px; margin-right:30px};
     }
-
+    &__heading {
+        margin-bottom: $regular-padding;
+    }
+    &__content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding: 0 10px;
+    
+        @include large {
+            justify-content: center;
+        }
+    }
 }
-
 
 .readmore{
     @include horizontally_centered;
@@ -42,25 +42,50 @@
     width: $card-width;
     height: 250px;
     border-radius: 8px;
-    position: relative;
-    margin-bottom: 150px;
-    &:nth-child(2){margin-left: 30px; margin-right:30px};
+    &__description{
+        justify-content: space-between;
+        justify-content: space-evenly;
+        padding: 0 10px;
+        @include large{justify-content: center;
+        }
+    }
+    &__informations{
+        width: $card-textarea-width;
+        height: $card-textarea-height;
+        border-radius: 8px;
+        bottom: -$card-textarea-height/2;
+        @include horizontally_centered;
+        @include whitey;
+        padding: 30px 30px $textarea-bottom-space 30px;
+        box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+    }
+    &__readmore{
+        @include horizontally_centered;
+        color: $color-pinkey;
+        bottom: $textarea-bottom-space;
+        text-decoration: none;
+        text-align: center;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
 }
 
-.feature-card__description{
-    justify-content: space-between;
-    justify-content: space-evenly;
-    padding: 0 10px;
-    @include large{justify-content: center;}
-}
+// .feature-card__description{
+//     justify-content: space-between;
+//     justify-content: space-evenly;
+//     padding: 0 10px;
+//     @include large{justify-content: center;}
+// }
 
-.feature-card__informations{
-    width: $card-textarea-width;
-    height: $card-textarea-height;
-    border-radius: 8px;
-    bottom: -$card-textarea-height/2;
-    @include horizontally_centered;
-    @include whitey;
-    padding: 30px 30px $textarea-bottom-space 30px;
-    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
-}
+// .feature-card__informations{
+//     width: $card-textarea-width;
+//     height: $card-textarea-height;
+//     border-radius: 8px;
+//     bottom: -$card-textarea-height/2;
+//     @include horizontally_centered;
+//     @include whitey;
+//     padding: 30px 30px $textarea-bottom-space 30px;
+//     box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.1);
+// }

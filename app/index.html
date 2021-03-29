@@ -12,15 +12,13 @@
     <meta property="og:title" content="Bold recruitment task by Piotr Maksymiuk" />
     <meta property="og:type" content="Web Application" />
     <meta property="og:url" content="http://kiszuriwalilibori.github.io/bold" />
-    <meta name="version" content="1.0.7">
+    <meta name="version" content="1.0.9">
     <link rel="preload" href="./styles/fonts/lato-v17-latin-700.woff2" type='font/woff2' as="font"
         crossorigin='anonymous' />
     <link rel="preload" href="./styles/fonts/lato-v17-latin-regular.woff2" type='font/woff2' as="font"
         crossorigin='anonymous' />
     <link rel="preload" media="(min-width: 1130px)" href="./images/background_large.jpg" as="image" />
     <link rel="preload" media="(max-width: 768px)" href="./images/background_mobile.jpg" as="image" />
-
-    <link rel="preload" href="./graphics/textures/broken-noise.webp" as="image" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <script src="./js/bundle.js" defer></script>
 </head>
@@ -28,8 +26,8 @@
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <header>
-        <section class='overview'>
-            <nav class='navbar overview__navbar'>
+        <section class='overview-section'>
+            <nav class='navbar overview-section__navbar'>
                 <div class='brand'>
                     <img class='brand__logo' src='./images/cloud.svg' alt='cloudware logo' loading=lazy>
                     <p class='brand__name'>cloudbudget</p>
@@ -44,50 +42,50 @@
                 <img id='hamburger' class='hamburger-menu navbar__hamburger-menu' src='./images/hamburger_menu.svg'
                     alt='mobile menu' loading=lazy>
             </nav>
-            <h1 class='overview__heading'>
+            <h1 class='overview-section__heading'>
                 Cloudbudget
             </h1>
-            <p class='overview__intro'>Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of
+            <p class='overview-section__intro'>Cloud budget management for everyone. Only €69.95 a Month After a 7 Day Trial of
                 <br>Up to €4.99</p>
             <button class='button button--signup'>sign up</button>
         </section>
     </header>
     <main>
-        <section class='features' id='features'>
-            <h2 class="heading_2 features__heading">features</h2>
-            <div class='features__content'>
-                <article class='feature-card'><img src='./images/feature_1.jpg' alt='feature image 1' loading=lazy>
+        <section class='features-section' id='features'>
+            <h2 class="heading_2 features-section__heading">features</h2>
+            <div class='features-section__content'>
+                <article class='feature-card features-section__card'><img src='./images/feature_1.jpg' alt='feature image 1' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Supports All Currencies and Cards</h3>
                         <p class='feature-card__description'>We support all popular currencies and is fully customizable
                             to add
                         </p>
-                        <a class='readmore' href=''>Read More</a>
+                        <a class='feature-card__readmore' href=''>Read More</a>
                     </div>
                 </article>
-                <article class='feature-card'><img src='./images/feature_2.jpg' alt='feature image 2' loading=lazy>
+                <article class='feature-card features-section__card'><img src='./images/feature_2.jpg' alt='feature image 2' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Manage your expenses on the go</h3>
                         <p class='feature-card__description'>You can access your account from anywhere in the world on
                             any
                             device</p>
-                        <a class='readmore' href=''>Read More</a>
+                        <a class='feature-card__readmore' href=''>Read More</a>
                     </div>
                 </article>
-                <article class='feature-card'><img src='./images/feature_3.jpg' alt='feature image 3' loading=lazy>
+                <article class='feature-card features-section__card'><img src='./images/feature_3.jpg' alt='feature image 3' loading=lazy>
                     <div class='feature-card__informations'>
                         <h3 class='heading_3 feature-card__heading'>Cloud Budget Management Software</h3>
                         <p class='feature-card__description'>Our software is made so you can access and manage your
                             budget</p>
-                        <a class='readmore' href=''>Read More</a>
+                        <a class='feature-card__readmore' href=''>Read More</a>
                     </div>
                 </article>
             </div>
         </section>
 
-        <section class='technology' id='technology'>
-            <h2 class="heading_2 technology__heading">technology</h2>
-            <div class='technology__content'>
+        <section class='technology-section' id='technology'>
+            <h2 class="heading_2 technology-section__heading">technology</h2>
+            <div class='technology-section__content'>
                 <article class='technology-item'>
                     <div class='technology-item__number'>
                         <span>01</span>
@@ -126,17 +124,17 @@
             </div>
         </section>
 
-        <section class='mission' id='mission'>
-            <div class='mission__content'>
-                <article class='introduction mission__introduction'>
-                    <h2 class="heading_2 heading--left heading--phrase-style mission__heading">stay focused on saving
+        <section class='mission-section' id='mission'>
+            <div class='mission-section__content'>
+                <article class='introduction mission-section__introduction'>
+                    <h2 class="heading_2 heading--left heading--phrase-style mission-section__heading">stay focused on saving
                         money</h2>
-                    <p class="introducing-text">It is important to stay focused on saving money in any way you can. We
+                    <p class="mission-section__introducing-text">It is important to stay focused on saving money in any way you can. We
                         help you monitor your spending habits so you can easily spot and cut any unnecessary expenses.
                         Simply
                         join today to get started!</p>
-                    <div class='mission__logos'>
-                        <a class=mission__anchor>
+                    <div class='mission-section__logos'>
+                        <a class=mission-section__anchor>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -153,7 +151,7 @@
                                     fill="white" />
                             </svg>
                         </a>
-                        <a class=mission__anchor>
+                        <a class=mission-section__anchor>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -161,7 +159,7 @@
                                     fill="white" />
                             </svg>
                         </a>
-                        <a class=mission__anchor><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <a class=mission-section__anchor><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M0 3.449L9.75 2.1V11.551H0V3.449ZM10.949 1.949L24 0V11.4H10.949V1.949ZM0 12.6H9.75V22.051L0 20.699V12.6ZM10.949 12.6H24V24L11.1 22.199"
@@ -171,7 +169,7 @@
                     </div>
 
                 </article>
-                <article class='mission-right'>
+                <article class='mission-section__images-container'>
                     <div class='mission__image mission__image--left'></div>
                     <div class='mission__image mission__image--front'></div>
                     <div class='mission__image mission__image--right'></div>
@@ -183,26 +181,26 @@
             <div class='contact__content'>
                 <article class='introduction contact__introduction'>
                     <h2 class="heading_2 heading--left contact__heading">contact</h2>
-                    <p class="introducing-text">Questions or concerns? Just fill out the form below
+                    <p class="contact__introducing-text">Questions or concerns? Just fill out the form below
                         and our support team will get back to you within 24 hours</p>    
                 </article>
 
-                <form class='form contact__form' id="form">
-                    <input type="text" class='input input--small input--first form__item' placeholder='First Name'
-                        name='firstname'  required>
-                    <input type="text" class='input input--small form__item' placeholder='Last Name' name='lastname'
+                <form class='form contact__form ' id="form">
+                    <input type="text" class='form__input input--small input--first' placeholder='First Name'
+                        name='firstname' required>
+                    <input type="text" class='form__input input--small' placeholder='Last Name' name='lastname'
                       required>
                     <input type="tel" id="phone" placeholder='Phone Number' name='phone_number'
-                        class='input input--large form__item' required>
-                    <select name="services" id="services" class='input input--large input--select form__item' required>
+                        class='form__input input--large' required>
+                    <select name="services" id="services" class='form__input input--large input--select' required>
                         <option value="" disabled selected>Select Services</option>
                         <option value="laundry">Money Laundry</option>
                         <option value="tax">Tax Optimisation</option>
                         <option value="plan">Income Planning</option>
                     </select>
-                    <div class='form-buttons-container'>
-                        <button type ="submit" id='submit_button' class='button button--submit form-buttons-container__item' disabled>submit now</button>
-                        <button class='message-box form-buttons-container__item' id='message_box'></button>
+                    <div class='form__buttons-container buttons-container'>
+                        <button type ="submit" id='submit_button' class='button button--submit buttons-container__item' disabled>submit now</button>
+                        <button class='message-box buttons-container__item' id='message_box'></button>
                     </div>
                 </form>
             </div>

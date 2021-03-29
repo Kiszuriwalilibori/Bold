@@ -48,6 +48,9 @@ done 018
 ### 1.0.8
 - 012 detailed revision of sizes/distance
 
+### 1.0.9
+-fixed 023, 014
+
 ### Todos
  
  ## 001 Process W3C Validation
@@ -72,4 +75,6 @@ done 018
  ## 020 preloading of main image 
  ## 021 main image in versions dependent on viewport size
  ## 022 lazy loading of some images in document body
+ ## 023 validate should affect also fields
+
  

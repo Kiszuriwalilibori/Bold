@@ -1,87 +1,119 @@
-.mission {
+.mission-section {
     width: 100%;
     min-height: 500px;
     display: flex;
     flex-direction: row;
     padding-top: 60px;
-    @include large {padding-top: 122px;}
+
+    @include large {
+        padding-top: 122px;
+    }
+
     background-color: #ED4C5C;
     color: #ffffff;
-}
 
-.mission__heading {
-    margin-bottom: 60px;
-}
+    &__introducing-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        padding: 0 1%;
 
-.mission__content {
-    max-width: 1110px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-
-    @include large {
-        flex-direction: row;
+        @include large {
+            text-align: justify;
+            padding: unset;
+        }
     }
-}
 
-.mission__introduction {
-    padding-right: 2%;
-    //padding-left: 2%;
-    width: unset;
+    &__heading {
+        margin-bottom: $regular-padding;
+    }
 
-    @include large {
+    &__content {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include large {
+            flex-direction: row;
+        }
+    }
+
+    &__introduction {
+        padding-right: 2%;
+        width: unset;
+
+        @include large {
+            flex-grow: 1;
+            width: 50%;
+            padding-right: $preface-horizontal-padding;
+        }
+    }
+
+    &__logos {
+        margin-top: 40px;
+        @include flex-row-align-center;
+        justify-content: center;
+
+        @include large {
+            justify-content: flex-start;
+        }
+
+    }
+
+    &__anchor {
+        margin-right: 24px;
+        cursor: pointer;
+    }
+    &__images-container {
         flex-grow: 1;
         width: 50%;
-        padding-right: $preface-horizontal-padding;
+        margin-left: -20px;
+        position: relative;
+        margin-top: -120px;
+    
+    
+        @include tablet {
+            margin-top: unset;
+            min-height: 400px;
+            margin-left: unset;
+            width: unset;
+        }
+    
+        @include mobile {
+            margin-top: unset;
+            min-height: 400px;
+            margin-left: unset;
+            width: unset;
+        }
     }
 }
 
-.mission__logos {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    @include large{justify-content:flex-start;}
-
-}
-
-.mission__anchor {
-    margin-right: 24px;
-    cursor: pointer;
-}
+// .mission__images {
+//     flex-grow: 1;
+//     width: 50%;
+//     margin-left: -20px;
+//     position: relative;
+//     margin-top: -120px;
 
 
-.mission-right {
-    flex-grow: 1;
-    width: 50%;
-    margin-left: -20px;
-    position: relative;
-    margin-top: -120px;
+//     @include tablet {
+//         margin-top: unset;
+//         min-height: 400px;
+//         margin-left: unset;
+//         width: unset;
+//     }
 
-    // @include large{
-    //     flex-grow: 1;
-    //     width: 50%;
-    //     margin-left: -20px;
-    //     position: relative;
-    //     margin-top: -120px;   
-    // }
-
-    @include tablet {
-        margin-top: unset;
-        min-height: 400px;
-        margin-left: unset;
-        width: unset;
-    }
-
-    @include mobile {
-        margin-top: unset;
-        min-height: 400px;
-        margin-left: unset;
-        width: unset;
-    }
-}
+//     @include mobile {
+//         margin-top: unset;
+//         min-height: 400px;
+//         margin-left: unset;
+//         width: unset;
+//     }
+// }
 
 
 .mission__image {

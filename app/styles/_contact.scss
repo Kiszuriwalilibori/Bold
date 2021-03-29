@@ -2,33 +2,67 @@
     width: 100%;
     min-height: 500px;
     background-color: #ffffff;
-    padding-top: 60px;
+    padding-top: $regular-padding;
     color: #000000;
     @include large{padding-top: 117px;}
     &__button{margin-bottom:60px;}
-}
+    &__introducing-text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
+        padding: 0 1%;
 
-.contact__heading{
-    margin-bottom: 7.8vw;
-    text-align:center;
-    @include large{text-align: left;}
-    @include tablet{margin-bottom: 60px;};
-    @include large{margin-bottom: 60px;}
+        @include large {
+            text-align: justify;
+            padding:unset;
+        }
 
-}
-.contact__content {
-    width: 100%;
-    max-width: 1110px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    }
+    &__heading{
+        margin-bottom: 7.8vw;
+        text-align:center;
+        @include large{text-align: left;}
+        @include tablet{margin-bottom: $regular-padding;};
+        @include large{margin-bottom: $regular-padding;}
+    
+    }
+    &__content {
+        width: 100%;
+        max-width: 1110px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    
+        @include large {
+            flex-direction: row;
+        }
+    }
+    &__form{
+        margin: 0 auto;
+        
+        @include flex-column-align-center;
 
-    @include large {
-        flex-direction: row;
+    
+        @include large {
+            display: block;
+            position:relative;
+            left: calc(0px + 35 * ((100vw - 1130px) / 310));
+        }
+    }
+    &__introduction {
+
+        padding: unset;
+        margin: 0 auto;
+        padding-bottom: 4%;
+    
+        @include large {
+            padding-left: 11px;
+            padding-right: $preface-horizontal-padding;
+        }
     }
 }
-
 
 .introduction {
     width: 100%;
@@ -38,61 +72,41 @@
     }
 }
 
+
+// .introducing-text {
+//     font-weight: 400;
+//     font-size: 14px;
+//     line-height: 140%;
+//     text-align: center;
+//     padding: 0 1%;
+
+//     @include large {
+//         text-align: justify;
+//         padding:unset;
+//     }
+
+// }
+
+
 .form{
     flex-grow: 1;
     width: 50%;
     &__button{margin-bottom:60px;}
 }
 
-.contact__form{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    @include large {
-        display: block;
-        position:relative;
-        left: calc(0px + 35 * ((100vw - 1130px) / 310));
-    }
-}
 
 
-.contact__introduction {
-
-    padding: unset;
-    margin: 0 auto;
-    padding-bottom: 4%;
-
-    @include large {
-        padding-left: 11px;
-        padding-right: $preface-horizontal-padding;
-    }
-}
-
-.introducing-text {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 140%;
-    text-align: center;
-    padding: 0 1%;
-
-    @include large {
-        text-align: justify;
-        padding:unset;
-    }
-
-}
-
-.input {
+.form__input {
     border-radius: 6px;
     border: 1px solid $color-dark;
-    height: 60px;
     font-size: 16px;
-    padding-left: 30px;
+    height: 45px;
+    padding-left: 15px;
+    @include large{height: 60px; padding-left: 30px;};
+    @include tablet{height: 60px; padding-left: 30px;}
     margin-bottom: $input-space;
     transition: 300ms all;
-
+    &--not-validated{background-color: $color-warning;}
     &:focus,
     &:active {
         outline: none;
@@ -131,13 +145,15 @@
     color: gray;
 }
 
-.form-buttons-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.form__buttons-container{
+    @include flex-column-align-center;
     justify-content:flex-start;
     @include large{flex-direction: row; justify-content:space-between; width:540px;}
     @include tablet{flex-direction: row; justify-content:space-between; width:540px;}
+    
+}
+
+.buttons-container{
     &__item{
         margin: 15px 0 30px 0;
     }
